@@ -3,17 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monitoria - Relatórios</title>
+    <title>SEDUC - Relatórios</title>
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.3/jspdf.plugin.autotable.min.js"></script>
+    <script defer src="lib/jspdf.umd.min.js"></script>
+    <script defer src="lib/jspdf.plugin.autotable.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Relatórios de Faltas e Horários</h1>
+        <h1>SEDUC - Relatórios de Faltas e Horários</h1>
         <nav>
             <a href="main.html">Horários</a>
             <a href="absences.html">Faltas</a>
+            <a href="students.html">Alunos</a>
             <a href="reports.html">Relatórios (PDF)</a>
         </nav>
         <p>Baixe os relatórios de Faltas em PDF:</p>
@@ -25,6 +26,9 @@
         <button onclick="generateSchedulesPDF('weekly')">Semanal Horários</button>
         <button onclick="generateSchedulesPDF('monthly')">Mensal Horários</button>
     </div>
+    <footer>
+        <p>&copy; 2025 Luiz Felipe. Todos os direitos reservados.</p>
+    </footer>
     <script>
         if (localStorage.getItem('loggedIn') !== 'true') {
             console.log('Usuário não logado, redirecionando para index.html');
